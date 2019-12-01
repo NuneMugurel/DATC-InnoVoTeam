@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "DATC2\Web.csproj", "{7676233E-DC85-4315-8914-3EF0CA260214}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{A93536B4-2CBA-4862-800F-ABDA1B2F44CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7676233E-DC85-4315-8914-3EF0CA260214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7676233E-DC85-4315-8914-3EF0CA260214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7676233E-DC85-4315-8914-3EF0CA260214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7676233E-DC85-4315-8914-3EF0CA260214}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A93536B4-2CBA-4862-800F-ABDA1B2F44CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A93536B4-2CBA-4862-800F-ABDA1B2F44CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A93536B4-2CBA-4862-800F-ABDA1B2F44CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A93536B4-2CBA-4862-800F-ABDA1B2F44CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CB90FDC-122E-4BC8-B842-2F42C3BF55FC}
+	EndGlobalSection
+EndGlobal
