@@ -26,7 +26,7 @@ namespace Datc.Data.Repository
             {
                 query = query.Where(filter);
             }
-            foreach (var includeProperty in includeProperties.Split (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
             {
                 query = query.Include(includeProperty);
             }
@@ -51,6 +51,11 @@ namespace Datc.Data.Repository
             _dbContext.SaveChanges();
         }
 
+        public void TransactionalInsert(TEntity entity)
+        {
+            _dbSet.Add(entity);
+        }
+
         public void Delete(TEntity entityToDelete)
         {
             if (_dbContext.Entry(entityToDelete).State == EntityState.Detached)
@@ -58,8 +63,26 @@ namespace Datc.Data.Repository
                 _dbSet.Attach(entityToDelete);
             }
             _dbSet.Remove(entityToDelete);
+            _dbContext.SaveChanges();
         }
+
         public void Delete(object id)
+        {
+            TEntity entityToDelete = _dbSet.Find(id);
+            Delete(entityToDelete);
+            _dbContext.SaveChanges();
+        }
+
+        public void TransactionalDelete(TEntity entityToDelete)
+        {
+            if (_dbContext.Entry(entityToDelete).State == EntityState.Detached)
+            {
+                _dbSet.Attach(entityToDelete);
+            }
+            _dbSet.Remove(entityToDelete);
+        }
+
+        public void TransactionalDelete(object id)
         {
             TEntity entityToDelete = _dbSet.Find(id);
             Delete(entityToDelete);
@@ -70,6 +93,12 @@ namespace Datc.Data.Repository
             _dbSet.Attach(entityToUpdate);
             _dbContext.Entry(entityToUpdate).State = EntityState.Modified;
             _dbContext.SaveChanges();
+        }
+
+        public void TransactionalUpdate(TEntity entityToUpdate)
+        {
+            _dbSet.Attach(entityToUpdate);
+            _dbContext.Entry(entityToUpdate).State = EntityState.Modified;
         }
     }
 }

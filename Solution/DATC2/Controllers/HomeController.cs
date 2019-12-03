@@ -22,11 +22,6 @@ namespace DATC.Controllers
         {
             using (var repository = new RepositoryFactory())
             {
-                var candidate = repository.GetRepository<Candidate>().Get(x => x.FirstName == "Barna").FirstOrDefault();
-
-                var voter = repository.GetRepository<Voter>().Get(x => x.FirstName == "Sorin").FirstOrDefault();
-                voter.Candidate = candidate;
-                repository.GetRepository<Voter>().Update(voter);
             }
             return "inserted";
         }

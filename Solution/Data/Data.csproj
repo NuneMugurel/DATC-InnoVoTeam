@@ -54,6 +54,8 @@
     <Compile Include="DatcDbContext.cs" />
     <Compile Include="IDatcDbContext.cs" />
     <Compile Include="Model\Candidate.cs" />
+    <Compile Include="Model\SecretQuestion.cs" />
+    <Compile Include="Model\Vote.cs" />
     <Compile Include="Model\Voter.cs" />
     <Compile Include="Model\VotingSession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
