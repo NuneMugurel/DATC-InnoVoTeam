@@ -23,6 +23,11 @@ namespace Datc.Data.Repository
             return _dbContext;
         }
 
+        public void SaveChanges()
+        {
+            _dbContext.SaveChanges();
+        }
+
         #region IDisposable Support
         protected virtual void Dispose(bool disposing)
         {

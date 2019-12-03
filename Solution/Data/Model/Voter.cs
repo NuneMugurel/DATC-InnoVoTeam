@@ -11,6 +11,5 @@ namespace Data.Model
         public string LastName { get; set; }
         public string Cnp { get; set; }
         public SecretQuestion SecretQuestion { get; set; }
-
     }
 }
