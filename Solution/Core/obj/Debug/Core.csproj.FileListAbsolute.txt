@@ -1,0 +1,5 @@
+D:\School\Github\DATC-InnoVoTeam\Solution\Core\bin\Debug\Core.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Core\bin\Debug\Core.pdb
+D:\School\Github\DATC-InnoVoTeam\Solution\Core\obj\Debug\Core.csprojAssemblyReference.cache
+D:\School\Github\DATC-InnoVoTeam\Solution\Core\obj\Debug\Core.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Core\obj\Debug\Core.pdb

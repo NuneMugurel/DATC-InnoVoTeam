@@ -31,3 +31,5 @@ D:\School\Github\DATC-InnoVoTeam\Solution\Data\obj\Debug\Data.csprojAssemblyRefe
 D:\School\Github\DATC-InnoVoTeam\Solution\Data\obj\Debug\Data.csproj.CopyComplete
 D:\School\Github\DATC-InnoVoTeam\Solution\Data\obj\Debug\Data.dll
 D:\School\Github\DATC-InnoVoTeam\Solution\Data\obj\Debug\Data.pdb
+D:\School\Github\DATC-InnoVoTeam\Solution\Data\bin\Debug\Core.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Data\bin\Debug\Core.pdb

@@ -1,0 +1,17 @@
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:04:08 PM] Emulator config file set to D:\School\Github\DATC-InnoVoTeam\Solution\WebAPI\csx\Debug\roles\WebRole\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:04:08 PM] DiagnosticsStoreRootPath set to: C:\Users\Mugurel\AppData\Local\dftmp\Resources\682c7a02-8def-430a-bf4b-be8e24f62fde
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:04:08 PM] Loading config file: D:\School\Github\DATC-InnoVoTeam\Solution\WebAPI\csx\Debug\roles\WebRole\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:04:08 PM] Config file to read: D:\School\Github\DATC-InnoVoTeam\Solution\WebAPI\csx\Debug\roles\WebRole\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:04:08 PM] Checking VM Type
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:04:08 PM] Emulator config file set to D:\School\Github\DATC-InnoVoTeam\Solution\WebAPI\csx\Debug\roles\WebRole\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:04:08 PM] Extension set to Emulator Mode
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:04:08 PM] Reading XML configuration file
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:04:08 PM] Bypassing private config decryption
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:04:08 PM] Stopping the running plugin, if any
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:04:08 PM] No DiagnosticsPlugin is running.
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:04:08 PM] Killing any DiagnosticsPlugin that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:04:08 PM] Killing any MonAgentHost that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:04:08 PM] Diagnostics plugin stopped successfully
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:04:08 PM] Resetting DiagnosticPlugin
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:05:18 PM] DiagnosticsPlugin launched successfully with new configuration
+DiagnosticsPluginLauncher.exe Information: 0 : [12/6/2019 1:05:18 PM] DiagnosticPlugin exited with code 0
