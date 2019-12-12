@@ -1,0 +1,12 @@
+D:\School\Github\DATC-InnoVoTeam\Solution\Business\bin\Release\Business.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Business\bin\Release\Business.pdb
+D:\School\Github\DATC-InnoVoTeam\Solution\Business\bin\Release\Core.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Business\bin\Release\Newtonsoft.Json.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Business\bin\Release\System.Net.Http.Formatting.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Business\bin\Release\Core.pdb
+D:\School\Github\DATC-InnoVoTeam\Solution\Business\bin\Release\Newtonsoft.Json.xml
+D:\School\Github\DATC-InnoVoTeam\Solution\Business\bin\Release\System.Net.Http.Formatting.xml
+D:\School\Github\DATC-InnoVoTeam\Solution\Business\obj\Release\Business.csprojAssemblyReference.cache
+D:\School\Github\DATC-InnoVoTeam\Solution\Business\obj\Release\Business.csproj.CopyComplete
+D:\School\Github\DATC-InnoVoTeam\Solution\Business\obj\Release\Business.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Business\obj\Release\Business.pdb

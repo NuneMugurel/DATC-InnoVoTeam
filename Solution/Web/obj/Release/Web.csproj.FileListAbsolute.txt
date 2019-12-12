@@ -82,3 +82,7 @@ D:\School\Github\DATC-InnoVoTeam\Solution\Web\obj\Release\Web.csprojAssemblyRefe
 D:\School\Github\DATC-InnoVoTeam\Solution\Web\obj\Release\Web.csproj.CopyComplete
 D:\School\Github\DATC-InnoVoTeam\Solution\Web\obj\Release\Web.dll
 D:\School\Github\DATC-InnoVoTeam\Solution\Web\obj\Release\Web.pdb
+D:\School\Github\DATC-InnoVoTeam\Solution\Web\bin\Business.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Web\bin\System.Net.Http.Formatting.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Web\bin\Business.pdb
+D:\School\Github\DATC-InnoVoTeam\Solution\Web\bin\System.Net.Http.Formatting.xml

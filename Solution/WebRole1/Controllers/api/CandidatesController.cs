@@ -33,18 +33,13 @@ namespace WebRole1.Controllers.api
             return Ok(candidate);
         }
 
-        // PUT: api/Candidates/5
+        // PUT: api/Candidates
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutCandidate(int id, Candidate candidate)
+        public IHttpActionResult PutCandidate(Candidate candidate)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
-            }
-
-            if (id != candidate.Id)
-            {
-                return BadRequest();
             }
 
             db.Entry(candidate).State = EntityState.Modified;
@@ -55,7 +50,7 @@ namespace WebRole1.Controllers.api
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CandidateExists(id))
+                if (!CandidateExists(candidate.Id))
                 {
                     return NotFound();
                 }

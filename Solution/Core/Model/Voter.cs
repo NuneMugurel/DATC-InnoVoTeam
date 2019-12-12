@@ -10,6 +10,6 @@ namespace Data.Model
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Cnp { get; set; }
-        public SecretQuestion SecretQuestion { get; set; }
+        public ICollection<SecretQuestion>? SecretQuestions { get; set; }
     }
 }

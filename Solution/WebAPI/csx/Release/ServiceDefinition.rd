@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WebAPI" generation="1" functional="0" release="0" Id="d24d73eb-5dc6-40dd-9221-014215f8a4cd" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WebAPI" generation="1" functional="0" release="0" Id="10200bd4-9714-4ecd-96c3-c8a9292104b1" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="WebAPIGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -178,14 +178,14 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="edb2b778-9528-4ffe-8c01-5e93074806ce" ref="Microsoft.RedDog.Contract\ServiceContract\WebAPIContract@ServiceDefinition">
+    <implementation Id="3f7f6430-41c5-43b8-a429-673ec6107e2a" ref="Microsoft.RedDog.Contract\ServiceContract\WebAPIContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="77c2e752-155b-44c7-b65a-8165ea13ca8b" ref="Microsoft.RedDog.Contract\Interface\WebRole:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="d6a2c239-01be-4d8a-ae4c-bb033dbdc1fb" ref="Microsoft.RedDog.Contract\Interface\WebRole:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/WebAPI/WebAPIGroup/WebRole:Endpoint1" />
           </inPort>
         </interfaceReference>
-        <interfaceReference Id="72221cbe-b97b-456b-9dc6-e0ff2e3d5bdf" ref="Microsoft.RedDog.Contract\Interface\WebRole:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput@ServiceDefinition">
+        <interfaceReference Id="98102139-9a51-4af7-bdc3-5edde9fbf89d" ref="Microsoft.RedDog.Contract\Interface\WebRole:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/WebAPI/WebAPIGroup/WebRole:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput" />
           </inPort>

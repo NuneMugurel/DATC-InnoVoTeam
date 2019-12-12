@@ -42,3 +42,7 @@ D:\School\Github\DATC-InnoVoTeam\Solution\Web.Tests\obj\Release\Web.Tests.csproj
 D:\School\Github\DATC-InnoVoTeam\Solution\Web.Tests\obj\Release\Web.Tests.csproj.CopyComplete
 D:\School\Github\DATC-InnoVoTeam\Solution\Web.Tests\obj\Release\Web.Tests.dll
 D:\School\Github\DATC-InnoVoTeam\Solution\Web.Tests\obj\Release\Web.Tests.pdb
+D:\School\Github\DATC-InnoVoTeam\Solution\Web.Tests\bin\Release\Business.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Web.Tests\bin\Release\System.Net.Http.Formatting.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Web.Tests\bin\Release\Business.pdb
+D:\School\Github\DATC-InnoVoTeam\Solution\Web.Tests\bin\Release\System.Net.Http.Formatting.xml
