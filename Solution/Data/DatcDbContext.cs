@@ -12,5 +12,6 @@ namespace Data
 
         public DbSet<Voter> Voters { get; set; }
         public DbSet<Candidate> Candidates { get; set; }
+        public DbSet<SecretQuestion> SecretQuestions { get; set; }
     }
 }

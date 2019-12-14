@@ -1,4 +1,5 @@
 ﻿using Data.Model;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Web.Models
@@ -14,5 +15,6 @@ namespace Web.Models
         public string Cnp { get; set; }
         [Display(Name = "#Intrebari de verificare:")]
         public int SecretQuestionCounter { get; set; }
+        public IEnumerable<SecretQuestionViewModel> SecretQuestions { get; set; }
     }
 }

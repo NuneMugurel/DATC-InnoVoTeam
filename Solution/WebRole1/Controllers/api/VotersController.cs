@@ -17,14 +17,14 @@ namespace WebRole1.Controllers.api
         // GET: api/Voters
         public IQueryable<Voter> GetVoters()
         {
-            return db.Voters;
+            return db.Voters.Include(v => v.SecretQuestions);
         }
 
         // GET: api/Voters/5
         [ResponseType(typeof(Voter))]
         public IHttpActionResult GetVoter(int id)
         {
-            Voter voter = db.Voters.Find(id);
+            Voter voter = db.Voters.Include(v => v.SecretQuestions).Where(v => v.Id == id).SingleOrDefault();
             if (voter == null)
             {
                 return NotFound();
@@ -43,6 +43,12 @@ namespace WebRole1.Controllers.api
             }
 
             db.Entry(voter).State = EntityState.Modified;
+            foreach (var question in voter.SecretQuestions)
+                if (question.Id == 0)
+                    db.Entry(question).State = EntityState.Added;
+                else
+                    db.Entry(question).State = EntityState.Modified;
+
             try
             {
                 db.SaveChanges();

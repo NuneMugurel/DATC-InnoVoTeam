@@ -1,4 +1,5 @@
 ﻿using Data;
+using Data.Model;
 using System.Data.Entity;
 using System.Web.Http;
 using System.Web.Mvc;
@@ -16,7 +17,8 @@ namespace WebRole1
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            Database.SetInitializer<DatcDbContext>(new DropCreateDatabaseIfModelChanges<DatcDbContext>());
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<DatcDbContext>());
+            GlobalConfiguration.Configuration.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always; //detailed error instead of 500 internal server error
         }
     }
 }

@@ -15,26 +15,15 @@ namespace Web.Controllers
         public ActionResult Index()
         {
             var voters = ApiConsumer<Voter>.ConsumeGet("Voters");
-            var votersViewModelList = new List<VoterViewModel>();
-            foreach(var voter in voters)
-            {
-                var voterViewModel = new VoterViewModel
-                {
-                    FirstName = voter.FirstName,
-                    Id = voter.Id,
-                    LastName = voter.LastName,
-                    Cnp = voter.Cnp
-                };
-                try
-                {
-                    voterViewModel.SecretQuestionCounter = voter.SecretQuestions.Count;
-                }
-                catch
-                {
-                    voterViewModel.SecretQuestionCounter = 0;
-                }
-                votersViewModelList.Add(voterViewModel);
-            }
+            var votersViewModelList = from voter in voters
+                                      select new VoterViewModel
+                                      {
+                                          Id = voter.Id,
+                                          FirstName = voter.FirstName,
+                                          LastName = voter.LastName,
+                                          Cnp = voter.Cnp,
+                                          SecretQuestionCounter = voter.SecretQuestions.Count
+                                      };
             return View(votersViewModelList);
         }
 
@@ -55,9 +44,10 @@ namespace Web.Controllers
                     FirstName = voterViewModel.FirstName,
                     Id = voterViewModel.Id,
                     LastName = voterViewModel.LastName,
-                    Cnp = voterViewModel.Cnp
+                    Cnp = voterViewModel.Cnp,
+                    SecretQuestions = new List<SecretQuestion>()
                 };
-                ApiConsumer<Voter>.ConsumePost("Voters", voter);
+                var taskResult = ApiConsumer<Voter>.ConsumePost("Voters", voter);
                 return RedirectToAction("Index");
             }
             catch
@@ -123,6 +113,115 @@ namespace Web.Controllers
             try
             {
                 ApiConsumer<object>.ConsumeDelete("Voters", voterViewModel.Id);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: Candidates/Details/5
+        public ActionResult Details(int id)
+        {
+            var voter = ApiConsumer<Voter>.ConsumeGet("Voters", id);
+            var voterViewModel = new VoterViewModel
+            {
+                FirstName = voter.FirstName,
+                Id = voter.Id,
+                LastName = voter.LastName,
+                Cnp = voter.Cnp
+            };
+            voterViewModel.SecretQuestions = from secretQuestion in voter.SecretQuestions
+                                             select new SecretQuestionViewModel
+                                             {
+                                                 Id = secretQuestion.Id,
+                                                 Question = secretQuestion.Question,
+                                                 Answer = secretQuestion.Answer
+                                             };
+            return View(voterViewModel);
+        }
+
+        public ActionResult AddSecretQuestion(int id)
+        {
+            return View();
+        }
+
+        // POST: Voters/Create
+        [HttpPost]
+        public ActionResult AddSecretQuestion(SecretQuestionViewModel secretQuestionViewModel, int id)
+        {
+            try
+            {
+                var secretQuestion = new SecretQuestion
+                {
+                    Question = secretQuestionViewModel.Question,
+                    Answer = secretQuestionViewModel.Answer
+                };
+
+                var voter = ApiConsumer<Voter>.ConsumeGet("Voters", id);
+                voter.SecretQuestions.Add(secretQuestion);
+                var result = ApiConsumer<Voter>.ConsumePut("Voters", voter);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        public ActionResult DeleteSecretQuestion(int id)
+        {
+            var secretQuestion = ApiConsumer<SecretQuestion>.ConsumeGet("SecretQuestions", id);
+            var secretQuestionViewModel = new SecretQuestionViewModel
+            {
+                Id = secretQuestion.Id,
+                Question = secretQuestion.Question,
+                Answer = secretQuestion.Answer,
+            };
+            return View(secretQuestionViewModel);
+        }
+
+        // POST: Voters/Delete/5
+        [HttpPost]
+        public ActionResult DeleteSecretQuestion(SecretQuestionViewModel secretQuestionViewModel)
+        {
+            try
+            {
+                ApiConsumer<object>.ConsumeDelete("SecretQuestions", secretQuestionViewModel.Id);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        public ActionResult EditSecretQuestion(int id)
+        {
+            var voter = ApiConsumer<SecretQuestion>.ConsumeGet("SecretQuestions", id);
+            var secretQuestionViewModel = new SecretQuestionViewModel
+            {
+                Id = voter.Id,
+                Question = voter.Question,
+                Answer = voter.Answer,
+            };
+            return View(secretQuestionViewModel);
+        }
+
+        // POST: Voters/Edit/5
+        [HttpPost]
+        public ActionResult EditSecretQuestion(SecretQuestion secretQuestionViewModel)
+        {
+            try
+            {
+                var secretQuestion = new SecretQuestion
+                {
+                    Id = secretQuestionViewModel.Id,
+                    Question = secretQuestionViewModel.Question,
+                    Answer = secretQuestionViewModel.Answer
+                };
+                ApiConsumer<SecretQuestion>.ConsumePut("SecretQuestions", secretQuestion);
                 return RedirectToAction("Index");
             }
             catch

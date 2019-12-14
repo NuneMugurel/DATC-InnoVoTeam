@@ -137,6 +137,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CandidateViewModel.cs" />
+    <Compile Include="Models\SecretQuestionViewModel.cs" />
     <Compile Include="Models\VoterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -184,6 +185,10 @@
     <Content Include="Views\Voters\Create.cshtml" />
     <Content Include="Views\Voters\Delete.cshtml" />
     <Content Include="Views\Voters\Edit.cshtml" />
+    <Content Include="Views\Voters\Details.cshtml" />
+    <Content Include="Views\Voters\AddSecretQuestion.cshtml" />
+    <Content Include="Views\Voters\DeleteSecretQuestion.cshtml" />
+    <Content Include="Views\Voters\EditSecretQuestion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
