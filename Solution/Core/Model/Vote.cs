@@ -12,5 +12,6 @@ namespace Data.Model
         public Voter Voter { get; set; }
         public Candidate Candidate { get; set; }
         public VotingSession VotingSession { get; set; }
+        public DateTime SentTime { get; set; }
     }
 }

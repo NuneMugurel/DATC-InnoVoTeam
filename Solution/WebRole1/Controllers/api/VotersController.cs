@@ -27,7 +27,9 @@ namespace WebRole1.Controllers.api
             Voter voter = db.Voters.Include(v => v.SecretQuestions).Where(v => v.Id == id).SingleOrDefault();
             if (voter == null)
             {
-                return NotFound();
+                voter = db.Voters.Include(v => v.SecretQuestions).Where(v => v.Cnp == id.ToString()).SingleOrDefault();
+                if (voter == null)
+                    return NotFound();
             }
 
             return Ok(voter);

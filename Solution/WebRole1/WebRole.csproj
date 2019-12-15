@@ -191,6 +191,7 @@
     <Compile Include="Controllers\api\CandidatesController.cs" />
     <Compile Include="Controllers\api\SecretQuestionsController.cs" />
     <Compile Include="Controllers\api\VotersController.cs" />
+    <Compile Include="Controllers\api\VotingSessionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
