@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Web.Models.SessionHistoryViewModel>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SessionName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Winner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WinnerVotesPercentage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumVotes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SessionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Winner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WinnerVotesPercentage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumVotes)
+        </td>
+    </tr>
+}
+
+</table>

@@ -61,16 +61,6 @@ namespace Web.Controllers
             var votingSession = new VotingSession { StartDate = DateTime.Now, EndDate = votingSessionViewModel.EndDate, Name = votingSessionViewModel.Name };
             var candidates = ApiConsumer<Candidate>.ConsumeGet("Candidates");
             votingSession.Candidates = (ICollection<Candidate>)candidates;
-            //foreach(var candidate in candidates)
-            //{
-            //    candidate.VotingSessions.Add(votingSession);
-            //}
-            //foreach(var candidate in candidates)
-            //{
-            //    foreach (var sss in candidate.VotingSessions)
-            //        sss.Candidates = null;
-            //    var response = ApiConsumer<Candidate>.ConsumePut("Candidates", candidate);
-            //}
             var response = ApiConsumer<VotingSession>.ConsumePost("VotingSessions", votingSession);
             return RedirectToAction("Index");
         }
@@ -81,6 +71,47 @@ namespace Web.Controllers
             runningSession.EndDate = DateTime.Now;
             ApiConsumer<VotingSession>.ConsumePut("VotingSessions", runningSession);
             return RedirectToAction("Index");
+        }
+
+        public ActionResult SessionsHistory()
+        {
+            var sessions = ApiConsumer<VotingSession>.ConsumeGet("VotingSessions");
+            var votes = ApiConsumer<Vote>.ConsumeGet("Votes");
+            var pastSessions = new List<VotingSession>();
+            var pastSessionViewModelList = new List<SessionHistoryViewModel>();
+            foreach (var session in sessions)
+            {
+                if (DateTime.Compare(DateTime.Now, session.EndDate) > 0)
+                {
+                    var totalSessionVotes = votes.ToList().Where(v => v.VotingSession.Name == session.Name).Count();
+                    pastSessions.Add(session);
+                    var sessionHistoryViewModel = new SessionHistoryViewModel
+                    {
+                        StartDate = session.StartDate,
+                        EndDate = session.EndDate,
+                        SessionName = session.Name,
+                        Winner = "Placeholder",
+                        WinnerVotesPercentage = "?%",
+                        NumVotes = 0
+                    };
+
+                    foreach (var candidate in session.Candidates)
+                    {
+                        var candidateVotes = 0;
+                        foreach (var vote in votes)
+                            if (vote.Candidate.FirstName == candidate.FirstName && vote.Candidate.LastName == candidate.LastName)
+                                candidateVotes++;
+                        if (candidateVotes > sessionHistoryViewModel.NumVotes)
+                        {
+                            sessionHistoryViewModel.NumVotes = candidateVotes;
+                            sessionHistoryViewModel.WinnerVotesPercentage = (candidateVotes / totalSessionVotes).ToString() + "%";
+                            sessionHistoryViewModel.Winner = candidate.FirstName + " " + candidate.LastName;
+                        }
+                    }
+                    pastSessionViewModelList.Add(sessionHistoryViewModel);
+                }
+            }
+            return PartialView("SessionsHistory", pastSessionViewModelList);
         }
     }
 }

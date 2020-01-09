@@ -49,7 +49,7 @@ namespace WebRole1.Controllers.api
 
             db.Entry(votingSession).State = EntityState.Modified;
             foreach (var candidate in votingSession.Candidates)
-                db.Entry(candidate).State = EntityState.Added;
+                db.Entry(candidate).State = EntityState.Modified;
 
             try
             {
@@ -78,6 +78,10 @@ namespace WebRole1.Controllers.api
             {
                 return BadRequest(ModelState);
             }
+
+            db.Entry(votingSession).State = EntityState.Modified;
+            foreach (var candidate in votingSession.Candidates)
+                db.Entry(candidate).State = EntityState.Modified;
 
             db.VotingSessions.Add(votingSession);
             db.SaveChanges();

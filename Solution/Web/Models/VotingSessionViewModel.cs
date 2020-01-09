@@ -13,7 +13,7 @@ namespace Web.Models
         [Display(Name = "Nume")]
         public string Name { get; set; }
         public DateTime StartDate { get; set; }
-        [Display(Name = "Data scadenta")]
+        [Display(Name = "Data sfarsirii")]
         public DateTime EndDate { get; set; }
         [Display(Name = "Candidati")]
         public ICollection<CandidateViewModel> Candidates { get; set; }

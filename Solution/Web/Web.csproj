@@ -139,6 +139,7 @@
     <Compile Include="Models\CandidatePerSessionViewModel.cs" />
     <Compile Include="Models\CandidateViewModel.cs" />
     <Compile Include="Models\SecretQuestionViewModel.cs" />
+    <Compile Include="Models\SessionHistoryViewModel.cs" />
     <Compile Include="Models\VoterViewModel.cs" />
     <Compile Include="Models\VotingSessionViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -396,6 +397,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\VotingSession\Create.cshtml" />
     <Content Include="Views\VotingSession\SessionStats.cshtml" />
+    <Content Include="Views\VotingSession\SessionsHistory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
