@@ -13,5 +13,6 @@ namespace Data.Model
         public Candidate Candidate { get; set; }
         public VotingSession VotingSession { get; set; }
         public DateTime SentTime { get; set; }
+        public bool IsValid { get; set; }
     }
 }

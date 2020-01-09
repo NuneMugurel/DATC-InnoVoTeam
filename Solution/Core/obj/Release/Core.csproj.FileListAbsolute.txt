@@ -2,4 +2,3 @@ D:\School\Github\DATC-InnoVoTeam\Solution\Core\bin\Release\Core.dll
 D:\School\Github\DATC-InnoVoTeam\Solution\Core\bin\Release\Core.pdb
 D:\School\Github\DATC-InnoVoTeam\Solution\Core\obj\Release\Core.dll
 D:\School\Github\DATC-InnoVoTeam\Solution\Core\obj\Release\Core.pdb
-D:\School\Github\DATC-InnoVoTeam\Solution\Core\obj\Release\Core.csprojAssemblyReference.cache

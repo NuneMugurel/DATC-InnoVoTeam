@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using Web.Models;
 using System.Linq;
+using Data.AzureStorageManager;
 
 namespace Web.Controllers
 {
@@ -19,6 +20,8 @@ namespace Web.Controllers
 
         public ActionResult SessionStats()
         {
+            var azureStorageManager = new AzureStorageManager<string>();
+            var decoded = azureStorageManager.RetrieveMessage();
             var votingSessions = ApiConsumer<VotingSession>.ConsumeGet("VotingSessions");
             if (votingSessions.Count() > 0)
             {

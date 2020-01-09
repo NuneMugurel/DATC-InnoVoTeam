@@ -11,3 +11,16 @@ D:\School\Github\DATC-InnoVoTeam\Solution\Data\obj\Release\Data.csprojAssemblyRe
 D:\School\Github\DATC-InnoVoTeam\Solution\Data\obj\Release\Data.csproj.CopyComplete
 D:\School\Github\DATC-InnoVoTeam\Solution\Data\obj\Release\Data.dll
 D:\School\Github\DATC-InnoVoTeam\Solution\Data\obj\Release\Data.pdb
+D:\School\Github\DATC-InnoVoTeam\Solution\Data\bin\Release\Microsoft.Azure.KeyVault.Core.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Data\bin\Release\Microsoft.Azure.Storage.Common.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Data\bin\Release\Microsoft.Azure.Storage.Queue.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Data\bin\Release\Microsoft.WindowsAzure.Configuration.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Data\bin\Release\Microsoft.WindowsAzure.Storage.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Data\bin\Release\Newtonsoft.Json.dll
+D:\School\Github\DATC-InnoVoTeam\Solution\Data\bin\Release\Microsoft.Azure.KeyVault.Core.xml
+D:\School\Github\DATC-InnoVoTeam\Solution\Data\bin\Release\Microsoft.Azure.Storage.Common.xml
+D:\School\Github\DATC-InnoVoTeam\Solution\Data\bin\Release\Microsoft.Azure.Storage.Queue.xml
+D:\School\Github\DATC-InnoVoTeam\Solution\Data\bin\Release\Microsoft.WindowsAzure.Configuration.xml
+D:\School\Github\DATC-InnoVoTeam\Solution\Data\bin\Release\Microsoft.WindowsAzure.Storage.pdb
+D:\School\Github\DATC-InnoVoTeam\Solution\Data\bin\Release\Microsoft.WindowsAzure.Storage.xml
+D:\School\Github\DATC-InnoVoTeam\Solution\Data\bin\Release\Newtonsoft.Json.xml
