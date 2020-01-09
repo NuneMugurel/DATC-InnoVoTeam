@@ -1,6 +1,7 @@
 using Data;
 using Data.Model;
 using Datc.Data.Repository;
+using Newtonsoft.Json;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
@@ -18,6 +19,12 @@ namespace Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             Database.SetInitializer<DatcDbContext>(new DropCreateDatabaseIfModelChanges<DatcDbContext>());
+            JsonSerializerSettings settings = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+                MissingMemberHandling = MissingMemberHandling.Ignore,
+                ReferenceLoopHandling = ReferenceLoopHandling.Serialize
+            };
         }
     }
 }

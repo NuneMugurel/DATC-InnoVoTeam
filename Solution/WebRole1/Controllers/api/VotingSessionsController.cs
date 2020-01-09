@@ -20,7 +20,7 @@ namespace WebRole1.Controllers.api
         // GET: api/VotingSessions
         public IQueryable<VotingSession> GetVotingSessions()
         {
-            return db.VotingSessions;
+            return db.VotingSessions.Include(s => s.Candidates);
         }
 
         // GET: api/VotingSessions/5
@@ -48,6 +48,8 @@ namespace WebRole1.Controllers.api
             }
 
             db.Entry(votingSession).State = EntityState.Modified;
+            foreach (var candidate in votingSession.Candidates)
+                db.Entry(candidate).State = EntityState.Added;
 
             try
             {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Data.Model
@@ -15,6 +16,5 @@ namespace Data.Model
         public string LastName { get; set; }
         public string Cnp { get; set; }
         public ICollection<SecretQuestion> SecretQuestions { get; set; }
-
     }
 }

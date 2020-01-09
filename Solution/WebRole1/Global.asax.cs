@@ -1,5 +1,6 @@
 ﻿using Data;
 using Data.Model;
+using Newtonsoft.Json;
 using System.Data.Entity;
 using System.Web.Http;
 using System.Web.Mvc;
@@ -19,6 +20,13 @@ namespace WebRole1
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<DatcDbContext>());
             GlobalConfiguration.Configuration.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always; //detailed error instead of 500 internal server error
+            JsonSerializerSettings settings = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+                MissingMemberHandling = MissingMemberHandling.Ignore,
+                ReferenceLoopHandling = ReferenceLoopHandling.Serialize
+            };
+
         }
     }
 }

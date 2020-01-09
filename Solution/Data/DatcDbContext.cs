@@ -10,10 +10,18 @@ namespace Data
 
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            Configuration.ProxyCreationEnabled = false;
+        }
+
         public DbSet<Voter> Voters { get; set; }
         public DbSet<Candidate> Candidates { get; set; }
         public DbSet<SecretQuestion> SecretQuestions { get; set; }
 
-        public System.Data.Entity.DbSet<Data.Model.VotingSession> VotingSessions { get; set; }
+        public DbSet<VotingSession> VotingSessions { get; set; }
+
+        public DbSet<Vote> Votes { get; set; }
     }
 }

@@ -17,14 +17,14 @@ namespace WebRole1.Controllers.api
         // GET: api/Candidates
         public IQueryable<Candidate> GetCandidates()
         {
-            return db.Candidates;
+            return db.Candidates.Include(c => c.VotingSessions);
         }
 
         // GET: api/Candidates/5
         [ResponseType(typeof(Candidate))]
         public IHttpActionResult GetCandidate(int id)
         {
-            Candidate candidate = db.Candidates.Find(id);
+            Candidate candidate = db.Candidates.Include(c => c.VotingSessions).Where(c => c.Id == id).SingleOrDefault();
             if (candidate == null)
             {
                 return NotFound();
@@ -43,6 +43,9 @@ namespace WebRole1.Controllers.api
             }
 
             db.Entry(candidate).State = EntityState.Modified;
+            foreach (var votingSession in candidate.VotingSessions)
+                if (votingSession.Id == 0)
+                    db.Entry(votingSession).State = EntityState.Added;
 
             try
             {
